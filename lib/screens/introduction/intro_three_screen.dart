@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/custom_widgets/custom_screen_widgets.dart';
+import 'package:food_app/screens/authentication/login.dart';
 
 import '../../custom_widgets/text_custom_widgets.dart';
 class IntroThreeScreen extends StatelessWidget {
@@ -11,9 +12,14 @@ class IntroThreeScreen extends StatelessWidget {
       backgroundColor: Colors.redAccent,
       body: Column(mainAxisSize: MainAxisSize.min,
         children: [
-          skipText(),
+          GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),));
+
+              },
+              child: SkipText()),
           SizedBox(height: 41,),
-          appLogoInScreens(),
+          AppLogoInScreens(),
           SizedBox(height: 20,),
           Container(
             margin: EdgeInsets.only(left: 40,right: 40,bottom: 20),

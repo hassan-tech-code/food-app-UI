@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/screens/introduction/intro_one_screen.dart';
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
@@ -12,9 +13,14 @@ class SplashScreen extends StatelessWidget {
           margin: EdgeInsets.only(right: 90,top: 40),
           child: Image.asset('assets/images/Frame.png',height: double.infinity,),
         ),
-        Container(
-          margin: EdgeInsets.only(right: 100,top: 70,left: 80,bottom: 50),
-          child: Image.asset('assets/images/splash3.png',height: double.infinity,),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => IntroOneScreen(),));
+          },
+          child: Container(
+            margin: EdgeInsets.only(right: 100,top: 70,left: 80,bottom: 50),
+            child: Image.asset('assets/images/splash3.png',height: double.infinity,),
+          ),
         ),
         Container(
           margin: EdgeInsets.only(right: 90,top: 98,left: 175,bottom: 240),

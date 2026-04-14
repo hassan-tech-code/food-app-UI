@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/custom_widgets/custom_screen_widgets.dart';
 import 'package:food_app/custom_widgets/text_custom_widgets.dart';
+import 'package:food_app/screens/introduction/intro_two_screen.dart';
 class IntroOneScreen extends StatelessWidget {
   const IntroOneScreen({super.key});
 
@@ -11,9 +12,14 @@ class IntroOneScreen extends StatelessWidget {
       body: Column(
         //crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          skipText(), /// skip text in row
+          GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => IntroTwoScreen(),));
+
+              },
+              child: SkipText()), /// skip text in row
           SizedBox(height: 55,),
-          appLogoInScreens(),
+          AppLogoInScreens(),
           SizedBox(height: 30,),
           Container(
               margin: EdgeInsets.only(left: 40,right: 40),

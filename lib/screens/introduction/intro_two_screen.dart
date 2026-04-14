@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/custom_widgets/custom_screen_widgets.dart';
+import 'package:food_app/screens/introduction/intro_three_screen.dart';
 
 import '../../custom_widgets/text_custom_widgets.dart';
 class IntroTwoScreen extends StatelessWidget {
@@ -11,9 +12,14 @@ class IntroTwoScreen extends StatelessWidget {
       backgroundColor: Colors.redAccent,
       body: Column(
         children: [
-          skipText(),
+          GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => IntroThreeScreen(),));
+
+              },
+              child: SkipText()),
           SizedBox(height: 45,),
-          appLogoInScreens(),
+          AppLogoInScreens(),
           SizedBox(height: 23,),
           Container(
               margin: EdgeInsets.only(left: 40,right: 40,bottom: 20),

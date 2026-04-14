@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/custom_widgets/custom_screen_widgets.dart';
 import 'package:food_app/custom_widgets/text_custom_widgets.dart';
+import 'package:food_app/screens/authentication/forgot_password.dart';
+import 'package:food_app/screens/startup_screen/start_up_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -57,10 +59,16 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(height: 10),
                   CustomTextField(myHintText: 'Password'),
                   SizedBox(height: 10),
-                  SmallText(
-                    myText: 'Forgot Password?',
-                    myColor: Colors.red,
-                    myFontWeight: FontWeight.w500,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPasswordScreen(),));
+
+                    },
+                    child: SmallText(
+                      myText: 'Forgot Password?',
+                      myColor: Colors.red,
+                      myFontWeight: FontWeight.w500,
+                    ),
                   ),
 
                   SizedBox(height: 18),
@@ -69,7 +77,10 @@ class LoginScreen extends StatelessWidget {
                       fixedSize: Size(330, 55),
                       backgroundColor: Colors.deepOrangeAccent,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => StartUpScreen(),));
+
+                    },
                     child: Text(
                       'Login',
                       style: TextStyle(color: Colors.white, fontSize: 21),
@@ -151,7 +162,10 @@ class LoginScreen extends StatelessWidget {
                           fixedSize: Size(130, 55),
                           backgroundColor: Colors.deepOrangeAccent,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => StartUpScreen(),));
+
+                        },
                         child: Text(
                           'Sign Up',
                           style: TextStyle(color: Colors.white, fontSize: 21),

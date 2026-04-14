@@ -55,3 +55,64 @@ class SmallText extends StatelessWidget {
     );
   }
 }
+
+
+class SmallTextGrey extends StatelessWidget {
+  final String myText;
+  final double mySize;
+  final Color myColor ;
+  final FontWeight myFontWeight;
+  final TextAlign myTextAlign;
+   const SmallTextGrey({super.key,
+    this.myFontWeight = FontWeight.w400,
+    this.myColor=const Color(0xFF616161),
+    required this.myText,
+    this.mySize=17,  this.myTextAlign=TextAlign.start
+
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      textAlign: myTextAlign,
+      myText,
+      style: TextStyle(fontSize: mySize,
+          color: myColor,
+          fontWeight: myFontWeight,
+          overflow: TextOverflow.ellipsis
+      ),
+
+    );
+  }
+}
+
+class MediumText extends StatelessWidget {
+  final String myText;
+  final double mySize;
+  final Color myColor ;
+  final FontWeight myFontWeight;
+  final TextAlign myTextAlign;
+
+  const MediumText({super.key,
+    this.myFontWeight = FontWeight.w500,
+    this.myColor=Colors.black,
+    required this.myText,
+    this.mySize=22,  this.myTextAlign=TextAlign.start
+
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      textAlign: myTextAlign,
+      myText,
+      style: TextStyle(fontSize: mySize,
+          color: myColor,
+          fontWeight: myFontWeight,
+          overflow: TextOverflow.ellipsis
+
+      ),
+
+    );
+  }
+}
