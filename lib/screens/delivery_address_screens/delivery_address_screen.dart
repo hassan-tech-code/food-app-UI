@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/custom_widgets/custom_screen_widgets.dart';
 import 'package:food_app/custom_widgets/text_custom_widgets.dart';
 import 'package:food_app/screens/delivery_address_screens/delivery_address_edit_screen.dart';
 class DeliveryAddressScreen extends StatelessWidget {

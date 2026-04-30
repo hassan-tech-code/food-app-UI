@@ -111,8 +111,10 @@ class FilterContainer extends StatelessWidget {
 
 class SearchTextField extends StatelessWidget {
   final String myLabel;
+  final Color myColor;
   const SearchTextField({super.key,
-  this.myLabel='Search',
+  this.myLabel='Search food nearby',
+    this.myColor=Colors.white,
   });
 
   @override
@@ -123,7 +125,7 @@ class SearchTextField extends StatelessWidget {
         decoration: InputDecoration(
           prefixIcon: Icon(Icons.search),
             filled: true,
-        fillColor: Colors.white,
+        fillColor: myColor,
           label: Text(myLabel),
 
 
@@ -297,5 +299,33 @@ class FoodCard extends StatelessWidget {
     );
   }
 }
+
+class UsersNumberedContainer extends StatelessWidget {
+  final String userNumberOfContainer;
+  const UsersNumberedContainer({super.key, required this.userNumberOfContainer});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Container(
+      margin: EdgeInsets.only(top: 13),
+      padding: EdgeInsets.symmetric(horizontal: 20),
+
+      height: 50,
+      width: double.infinity,
+      decoration: BoxDecoration(
+          color: Colors.grey.shade300,
+          borderRadius: BorderRadius.circular(10)
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          SmallText(myText: userNumberOfContainer,myFontWeight: FontWeight.bold,),
+          Icon(Icons.arrow_forward_ios)
+        ],
+      ),
+    );
+  }
+}
+
 
 

@@ -39,6 +39,14 @@ class AppAssets{
   static const String friedRice2 ='${_imagePath}fried_rice2.png';
   static const String labelOnFoodPic1 ='${_imagePath}label_on_food_pic_1.png';
   static const String labelOnFoodPic2 ='${_imagePath}label_on_food_pic_2.png';
+  static const String homeScreen1 ='${_imagePath}home_screen1.png';
+  static const String homeScreen2 ='${_imagePath}home_screen2.png';
+  static const String homeScreen3 ='${_imagePath}home_screen3.png';
+  static const String homeScreen4 ='${_imagePath}home_screen4.png';
+  static const String homeScreen5 ='${_imagePath}home_screen5.png';
+  static const String homeScreen6 ='${_imagePath}home_screen6.png';
+  static const String homeScreen7 ='${_imagePath}home_screen7.png';
+  static const String friedRice3 ='${_imagePath}fried_rice3.png';
 
 
 }

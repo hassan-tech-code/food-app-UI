@@ -56,6 +56,37 @@ class SmallText extends StatelessWidget {
   }
 }
 
+class SmallTextWhite extends StatelessWidget {
+  final String myText;
+  final double mySize;
+  final Color myColor ;
+  final FontWeight myFontWeight;
+  final TextAlign myTextAlign;
+  final FontStyle myFontStyle;
+  const SmallTextWhite({super.key,
+    this.myFontWeight = FontWeight.w400,
+    this.myColor=Colors.white,
+    required this.myText,
+    this.mySize=18,  this.myTextAlign=TextAlign.start,
+    this.myFontStyle=FontStyle.normal,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      textAlign: myTextAlign,
+      myText,
+      style: TextStyle(fontSize: mySize,
+          color: myColor,
+          fontWeight: myFontWeight,
+          overflow: TextOverflow.ellipsis
+
+      ),
+
+    );
+  }
+}
+
 
 class SmallTextGrey extends StatelessWidget {
   final String myText;
@@ -79,7 +110,7 @@ class SmallTextGrey extends StatelessWidget {
       style: TextStyle(fontSize: mySize,
           color: myColor,
           fontWeight: myFontWeight,
-          overflow: TextOverflow.ellipsis
+          overflow: TextOverflow.visible
       ),
 
     );
